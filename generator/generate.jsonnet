@@ -113,7 +113,7 @@ local docstring =
           d.package.new(
             'jsonml-libsonnet',
             'github.com/Duologic/jsonml-libsonnet',
-            'Jsonnet library to generate XML/HTML tags.',
+            'Jsonnet library to generate XML/HTML.',
             'main.libsonnet',
             'main',
           )

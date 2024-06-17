@@ -3,7 +3,7 @@ local schema = import './schema.libsonnet';
 {
   '#': {
     filename: 'main.libsonnet',
-    help: "Jsonnet library to generate XML/HTML tags.\n## Install\n\n```\njb install github.com/Duologic/jsonml-libsonnet@main\n```\n\n## Usage\n\n```jsonnet\nlocal ml = import 'github.com/Duologic/jsonml-libsonnet/main.libsonnet';\n\nlocal head = ml.tag.new('head');\n\nlocal body =\n  ml.tag.new('body')\n  + ml.tag.withElements(\n    ml.tag.new('h1')\n    + ml.tag.withElements(\n      ml.literal.new('title')\n    )\n  );\n\nlocal html =\n  ml.tag.new('html')\n  + ml.tag.withAttributes(\n    ml.attribute.new('lang', 'en')\n  )\n  + ml.tag.withElements([\n    head,\n    body,\n  ]);\n\n\nhtml.manifest()\n\n```\n",
+    help: "Jsonnet library to generate XML/HTML.\n## Install\n\n```\njb install github.com/Duologic/jsonml-libsonnet@main\n```\n\n## Usage\n\n```jsonnet\nlocal ml = import 'github.com/Duologic/jsonml-libsonnet/main.libsonnet';\n\nlocal head = ml.tag.new('head');\n\nlocal body =\n  ml.tag.new('body')\n  + ml.tag.withElements(\n    ml.tag.new('h1')\n    + ml.tag.withElements(\n      ml.literal.new('title')\n    )\n  );\n\nlocal html =\n  ml.tag.new('html')\n  + ml.tag.withAttributes(\n    ml.attribute.new('lang', 'en')\n  )\n  + ml.tag.withElements([\n    head,\n    body,\n  ]);\n\n\nhtml.manifest()\n\n```\n",
     'import': 'github.com/Duologic/jsonml-libsonnet/main.libsonnet',
     installTemplate: '\n## Install\n\n```\njb install %(url)s@%(version)s\n```\n',
     name: 'jsonml-libsonnet',

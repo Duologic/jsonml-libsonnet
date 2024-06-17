@@ -1,6 +1,6 @@
 # jsonml-libsonnet
 
-Jsonnet library to generate XML/HTML tags.
+Jsonnet library to generate XML/HTML.
 ## Install
 
 ```
