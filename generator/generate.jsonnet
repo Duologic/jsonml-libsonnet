@@ -117,6 +117,13 @@ local docstring =
             'main.libsonnet',
             'main',
           )
+          + d.package.withUsageTemplate(
+            std.strReplace(
+              importstr '../test.libsonnet',
+              './main.libsonnet',
+              '%(import)s',
+            )
+          )
           , '  ', '\n'
         ),
       ),

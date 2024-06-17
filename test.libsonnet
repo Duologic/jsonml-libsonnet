@@ -1,22 +1,22 @@
-local main = import './main.libsonnet';
+local ml = import './main.libsonnet';
 
-local head = main.tag.new('head');
+local head = ml.tag.new('head');
 
 local body =
-  main.tag.new('body')
-  + main.tag.withElements(
-    main.tag.new('h1')
-    + main.tag.withElements(
-      main.literal.new('title')
+  ml.tag.new('body')
+  + ml.tag.withElements(
+    ml.tag.new('h1')
+    + ml.tag.withElements(
+      ml.literal.new('title')
     )
   );
 
 local html =
-  main.tag.new('html')
-  + main.tag.withAttributes(
-    main.attribute.new('lang', 'en')
+  ml.tag.new('html')
+  + ml.tag.withAttributes(
+    ml.attribute.new('lang', 'en')
   )
-  + main.tag.withElements([
+  + ml.tag.withElements([
     head,
     body,
   ]);
