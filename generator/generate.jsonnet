@@ -112,7 +112,7 @@ local docstring =
         std.manifestJsonEx(
           d.package.new(
             'jsonml-libsonnet',
-            '',
+            'github.com/Duologic/jsonml-libsonnet',
             'Jsonnet library to generate XML/HTML tags.',
             'main.libsonnet',
             'main',

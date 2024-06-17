@@ -3,11 +3,11 @@ local schema = import './schema.libsonnet';
 {
   '#': {
     filename: 'main.libsonnet',
-    help: 'Jsonnet library to generate XML/HTML tags.\n## Install\n\n```\njb install @main\n```\n\n## Usage\n\n```jsonnet\nlocal jsonml-libsonnet = import "/main.libsonnet"\n```\n',
-    'import': '/main.libsonnet',
+    help: 'Jsonnet library to generate XML/HTML tags.\n## Install\n\n```\njb install github.com/Duologic/jsonml-libsonnet@main\n```\n\n## Usage\n\n```jsonnet\nlocal jsonml-libsonnet = import "github.com/Duologic/jsonml-libsonnet/main.libsonnet"\n```\n',
+    'import': 'github.com/Duologic/jsonml-libsonnet/main.libsonnet',
     installTemplate: '\n## Install\n\n```\njb install %(url)s@%(version)s\n```\n',
     name: 'jsonml-libsonnet',
-    url: '',
+    url: 'github.com/Duologic/jsonml-libsonnet',
     usageTemplate: '\n## Usage\n\n```jsonnet\nlocal %(name)s = import "%(import)s"\n```\n',
     version: 'main',
   },
