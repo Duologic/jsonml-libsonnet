@@ -1,8 +1,8 @@
-local astRenderEngine = import './vendor/github.com/crdsonnet/crdsonnet/crdsonnet/renderEngines/ast.libsonnet';
 local a = import 'github.com/crdsonnet/astsonnet/main.libsonnet';
 local autils = import 'github.com/crdsonnet/astsonnet/utils.libsonnet';
 local helpers = import 'github.com/crdsonnet/crdsonnet/crdsonnet/helpers.libsonnet';
 local crdsonnet = import 'github.com/crdsonnet/crdsonnet/crdsonnet/main.libsonnet';
+local astRenderEngine = import 'github.com/crdsonnet/crdsonnet/crdsonnet/renderEngines/ast.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
 local schema = import '../schema.libsonnet';
