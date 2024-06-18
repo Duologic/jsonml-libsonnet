@@ -51,10 +51,10 @@ local schema = import './schema.libsonnet';
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'name', type: 'string' }], help: '' } },
       new(name):
         self.withType()
+        + self.withName(name)
         + {
-          manifest(): std.manifestXmlJsonml(schema['$defs'].tag.toJsonML(self)),
-        }
-        + self.withName(name),
+          manifest():: std.manifestXmlJsonml(schema['$defs'].tag.toJsonML(self)),
+        },
       '#withAttributes': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAttributes(value): {
         attributes:

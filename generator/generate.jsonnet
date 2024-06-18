@@ -54,6 +54,18 @@ local processor =
                       )
                     ),
                   ]
+                  + [
+                    a.functioncall.new(
+                      a.fieldaccess.new(
+                        [a.id.new('self')],
+                        a.id.new(astRenderEngine.functionName(property)),
+                      )
+                    )
+                    + a.functioncall.withArgs(
+                      a.arg.new(a.id.new(property))
+                    )
+                    for property in required
+                  ]
                   + (if name == 'tag'
                      then [
                        a.object.new([
@@ -68,22 +80,11 @@ local processor =
                            + a.functioncall.withArgs(
                              a.literal.new("schema['$defs'].tag.toJsonML(self)")
                            )
-                         ),
+                         )
+                         + a.field_function.withHidden(),
                        ]),
                      ]
                      else [])
-                  + [
-                    a.functioncall.new(
-                      a.fieldaccess.new(
-                        [a.id.new('self')],
-                        a.id.new(astRenderEngine.functionName(property)),
-                      )
-                    )
-                    + a.functioncall.withArgs(
-                      a.arg.new(a.id.new(property))
-                    )
-                    for property in required
-                  ]
                 ),
               )
               + a.field_function.withParams(
